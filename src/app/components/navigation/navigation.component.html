@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <header class="hero">
+    <div class="container">
+      <h1>Welcome to Our Website</h1>
+      <p>Your go-to platform for amazing services and solutions.</p>
+      <a 
+      href="formulario" 
+      class="btn btn-primary" 
+      (mouseover)="changeColor(true)" 
+      (mouseout)="changeColor(false)" 
+      [style.backgroundColor]="buttonBackgroundColor" 
+      [style.color]="buttonTextColor"
+    >
+      Form
+    </a>
+    
+    </div>
+  </header>
+  
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Features</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <h3>Feature 1</h3>
+            <p>Brief description of feature 1.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <h3>Feature 2</h3>
+            <p>Brief description of feature 2.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <h3>Feature 3</h3>
+            <p>Brief description of feature 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </div>
+  </footer>
+  

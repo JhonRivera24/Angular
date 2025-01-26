@@ -1,0 +1,29 @@
+<h1 class="text-center mb-4">Form</h1>
+
+<form id="formulario" [formGroup]="movieForm" (submit)="handleSubmit()" class="border p-4 rounded shadow">
+  <fieldset class="mb-3">
+    <label for="movie-name" class="form-label">Movie name:</label>
+    <input type="text" id="movie-name" formControlName="name" class="form-control" />
+    @if (name.invalid && name.touched) {
+      <p class="form-error">Name is required</p>
+    }
+  </fieldset>
+  
+  <fieldset class="mb-3">
+    <label for="movie-duration" class="form-label">Movie duration:</label>
+    <input type="text" id="movie-duration" formControlName="duration" class="form-control" />
+    @if (duration.hasError("required") && duration.touched) {
+      <p class="form-error">Duration is required</p>
+    } 
+    @else if (duration.hasError("max") && duration.touched) {
+      <p class="form-error">Movie cannot be longer than 300 minutes</p>
+    }
+  </fieldset>
+  
+  <fieldset class="mb-3">
+    <label for="movie-director" class="form-label">Movie director:</label>
+    <input type="text" id="movie-director" formControlName="director" class="form-control" />
+  </fieldset>
+  
+  <button [disabled]="movieForm.invalid" class="btn btn-primary w-100">Create Movie</button>
+</form>
